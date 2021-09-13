@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: composite
-        uses: ./action.yml@{{ github.ref }}
+        uses: ./action.yml@main
