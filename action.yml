@@ -19,4 +19,4 @@ runs:
 #       shell: bash
 #     - run: ${{ github.action_path }}/goodbye.sh
 #       shell: bash
-    - uses: ./action2.yml@{{ github.ref }}
+    - uses: ./action2.yml
