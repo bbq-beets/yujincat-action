@@ -20,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - id: composite
-        uses: ./action.yml@main
+        uses: ./@main
