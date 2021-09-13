@@ -1,22 +1,22 @@
 name: 'Hello World'
 description: 'Greet someone'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-outputs:
-  random-number:
-    description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-id }}
+# inputs:
+#   who-to-greet:  # id of input
+#     description: 'Who to greet'
+#     required: true
+# outputs:
+#   random-number:
+#     description: "Random number"
+#     value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: "composite"
   steps:
-    - run: exit 1
-    - run: echo Hello ${{ inputs.who-to-greet2 }}.
-      shell: bash
-    - id: random-number-generator
-      run: echo "::set-output name=random-id::$(echo $RANDOM)"
-      shell: bash
-    - run: ${{ github.action_path }}/goodbye.sh
-      shell: bash
-    - uses: ./goodbye.yml@{{ github.ref }}
+#     - run: exit 1
+#     - run: echo Hello ${{ inputs.who-to-greet2 }}.
+#       shell: bash
+#     - id: random-number-generator
+#       run: echo "::set-output name=random-id::$(echo $RANDOM)"
+#       shell: bash
+#     - run: ${{ github.action_path }}/goodbye.sh
+#       shell: bash
+    - uses: ./action2.yml@{{ github.ref }}
