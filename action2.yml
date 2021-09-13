@@ -1,0 +1,7 @@
+
+name: 'AC2'
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ref : ${{ github.ref }}.
