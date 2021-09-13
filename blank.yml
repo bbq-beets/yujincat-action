@@ -1,0 +1,22 @@
+name: composite action test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          echo ref: {{ github.ref }}
+  composite-action: 
+    runs-on: ubuntu-latest
+    steps:
+      - id: composite
+        uses: ./actions.yml@{{ github.ref }}
